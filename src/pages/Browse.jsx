@@ -1,6 +1,8 @@
-export default function Browse(){
+export default function Browse(props){
+    const {loggedUser} = props
+
     return(<div>
-    <h1>Browse pages</h1>
+    <h1>{loggedUser.nickname} welcome to Browse pages</h1>
     </div>)
 }
 

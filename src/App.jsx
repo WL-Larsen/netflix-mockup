@@ -5,8 +5,15 @@ import Login from './pages/Login'
 import Welcome from './pages/Welcome'
 import Browse from './pages/Browse'
 import NotFound from './pages/NotFound'
+import { useState } from 'react'
 
 function App() {
+  const [loggedUser, setLoggedUser] = useState(null)
+
+  const changeUser= (user)=>{
+    setLoggedUser(user)
+  }
+
   return (<>
   <Switch>
     <Route path='/' exact >
@@ -16,10 +23,10 @@ function App() {
       <Login />
     </Route>
     <Route path='/welcome' exact >
-      <Welcome />
+      <Welcome changeUser={changeUser}/>
     </Route>
     <Route path='/browse' exact >
-      <Browse/>
+      <Browse loggedUser={loggedUser} />
     </Route>
     <Route path='*' exact >
       <NotFound/>
