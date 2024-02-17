@@ -22,7 +22,7 @@ border-radius: 0.5rem;
 const UserPanel = styled.div`
 display: flex;
 gap: 0.5rem;
-justify-content: center
+justify-content: center;
 `;
 
 export default function Header(props){
@@ -30,11 +30,8 @@ export default function Header(props){
     return(<>
     <HeaderContainer>
         <Logo>WİTFLİX</Logo>
-        {loggedUser ?
-        <UserPanel><p>S</p><p>N</p></UserPanel>
-        :
-        <SingInButton>SingInButton</SingInButton>
-        }
+        {loggedUser ? (<UserPanel><p>S</p><p>N</p></UserPanel>) : 
+        (<SingInButton><button>SingInButton</button>SingInButton</SingInButton>)}
     </HeaderContainer>
         </>)
 }

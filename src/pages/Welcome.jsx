@@ -11,7 +11,9 @@ export default function Welcome(props){
     <h1>Who's Wacthing?</h1>
     <div className="profile-container">
         {profileList.map((item, index)=>{
-        return(<Profile changeUser={changeUser} key={index} profile={item} />)
+        return(<Profile changeUser={changeUser} 
+            key={index} 
+            profile={item} />)
     })}</div>
     </div>)
 }
