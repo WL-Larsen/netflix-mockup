@@ -23,7 +23,7 @@ function App() {
       <Login loggedUser={loggedUser}/>
     </Route>
     <Route path='/welcome' exact >
-      <Welcome changeUser={changeUser}/>
+      <Welcome changeUser={changeUser} loggedUser={loggedUser}/>
     </Route>
     <Route path='/browse' exact >
       <Browse loggedUser={loggedUser} />
