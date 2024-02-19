@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Fubar from "../assets/videos/Fubar.mp4";
 import PlayButton from "./PlayButton";
+import MoreInfo from "./MoreInfo";
 
 const Hero = styled.div` 
 width: 100%;
@@ -43,6 +43,12 @@ justify-content: center;
 z-index: 999;
 `;
 
+const Buttons = styled.div`
+display: flex;
+gap: 1rem;
+`;
+
+
 
 export default function Promote(){
     return (
@@ -55,8 +61,12 @@ export default function Promote(){
                 <MovieDesc>
                     When a father and daughter learn that they’ve each secretly been working as CIA Operatives for years, they realize their entire relationshiphas been a lie and they truly don’t know one another at all. Forced to team up as partners, FUBAR tackles universal family dynamics set against a global backdrop of spies, fantastic action and humor.
                     </MovieDesc>
+                    <Buttons>
                 <PlayButton />
+                <MoreInfo />
+                </Buttons>
             </MovieDetails>
+            
             
         </Hero>
     )
